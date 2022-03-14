@@ -1,0 +1,86 @@
+{
+  "name": "blitz-app-with-chakra-ui-template",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "blitz dev",
+    "dev-debug": "NODE_OPTIONS='--inspect' blitz dev",
+    "build": "blitz build",
+    "start": "blitz start",
+    "start:production": "blitz start --port $PORT",
+    "studio": "blitz prisma studio",
+    "prisma:migrate": "blitz prisma migrate dev",
+    "prisma:push": "blitz prisma db push",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
+    "test": "jest",
+    "test:prepare": "NODE_ENV=test blitz prisma db push",
+    "test:watch": "jest --watch",
+    "prepare": "husky install",
+    "generate:favicon": "real-favicon generate faviconDescription.json faviconData.json public",
+    "docker:up": "docker compose up -d",
+    "postinstall": "blitz prisma generate"
+  },
+  "prisma": {
+    "schema": "db/schema.prisma"
+  },
+  "prettier": {
+    "semi": false,
+    "printWidth": 100
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "1.1.1",
+    "@chakra-ui/react": "1.8.1",
+    "@chakra-ui/theme-tools": "1.3.1",
+    "@emotion/react": "11.7.1",
+    "@emotion/styled": "11.6.0",
+    "@formiz/core": "1.8.0",
+    "@formiz/validations": "1.0.0",
+    "@hookform/devtools": "4.0.2",
+    "@sendgrid/client": "7.6.0",
+    "@sendgrid/mail": "7.6.0",
+    "downshift": "6.1.7",
+    "framer-motion": "6.2.3",
+    "next-seo": "5.1.0",
+    "postmark": "2.8.2",
+    "prisma": "3.9.1",
+    "react-charts": "2.0.0-beta.7",
+    "react-error-boundary": "3.1.4",
+    "react-icons": "4.3.1",
+    "react-query": "3.34.12",
+    "react-resizable": "3.0.4",
+    "react-table": "7.7.0",
+    "react-tiny-virtual-list": "2.2.0",
+    "react-use": "17.3.2",
+    "@prisma/client": "3.9.0",
+    "blitz": "0.45.2",
+    "react-dom": "18.0.0-alpha-5ca4b0433-20211020",
+    "react": "18.0.0-beta-149b420f6-20211119",
+    "zod": "3.11.6",
+    "react-hook-form": "7.25.3",
+    "@hookform/resolvers": "2.8.8"
+  },
+  "devDependencies": {
+    "@types/eslint": "8.4.1",
+    "@types/prettier": "2.4.3",
+    "@types/react-dom": "17.0.11",
+    "@types/react-resizable": "1.7.4",
+    "@types/react-table": "7.7.9",
+    "cli-real-favicon": "latest",
+    "@types/preview-email": "2.0.1",
+    "@types/react": "17.0.38",
+    "eslint": "7.32.0",
+    "husky": "7.0.4",
+    "lint-staged": "11.3.0-beta.2",
+    "prettier-plugin-prisma": "3.9.0",
+    "prettier": "2.5.1",
+    "pretty-quick": "3.1.3",
+    "preview-email": "3.0.5",
+    "prisma": "3.9.0",
+    "typescript": "~4.5"
+  },
+  "private": true
+}
